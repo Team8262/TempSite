@@ -22,10 +22,17 @@
       color:rgb(255, 255, 255);
       font-family: 'Montserrat', sans-serif;
       filter:brightness(150%);
+      max-width: max-content;
     }
     @media (max-width:480px){
       .cLabel{
         font-size:2.5rem;
+      }
+      .info{
+        text-align: center;
+      }
+      .textbox{
+        margin-top:20px;
       }
     }
     @media (min-width:480px){
@@ -198,7 +205,7 @@
 
     <div class="navbar-brand" style="padding-left:12vw;" onClick="load('/',false)">
       <img style="position:relative;bottom:3px;height:30px;" src='assets/images/icon.svg'>
-      <a style="text-decoration:none" href="../">JUMP</a>
+      <a style="text-decoration:none" href="#">JUMP</a>
     </div>    
     <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -269,7 +276,7 @@
       </div>
     </div>
     <div id="about" class="container">
-      <div class="row" style="margin-top:10vh">
+      <div class="row info" style="margin-top:10vh">
           <div class="col" style="margin-right:10px"><img src="assets/images/team.jpg"></div>
           <div class="textbox col">
             <h1>About Us</h1>
@@ -279,7 +286,7 @@
 
     </div>
     <div id="first" class="container">
-      <div class="row" style="margin-top:10vh">
+      <div class="row info" style="margin-top:10vh">
         <div class="textbox col">
           <h1>About FIRST</h1>
           <p>This is a team that does things. This is a team that does things.This is a team that does things.This is a team that does things.This is a team that does things.</p>
