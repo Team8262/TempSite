@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/loadtemplate.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
@@ -26,10 +23,23 @@
       font-family: 'Montserrat', sans-serif;
       filter:brightness(150%);
     }
-    .cLabel{
-      font-size:4em;
-      font-weight:600;
+    @media (max-width:480px){
+      .cLabel{
+        font-size:2.5rem;
+      }
     }
+    @media (min-width:480px){
+
+      .cLabel{
+        font-size:4rem;
+        font-weight:600;
+      }
+
+    }
+
+
+    
+
   </style>
   <style>
     .navbar{
@@ -169,6 +179,18 @@
     #mail:hover{
         filter:brightness(175%);
     }
+    
+    .dropdown:hover .dropdown-menu{
+      display: block;
+      margin-top: 0;
+      margin-left:20%;
+    }
+    .dropdown-item{
+      background: -webkit-linear-gradient(10deg, rgb(32, 145, 221), rgb(91, 17, 228));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width:100%;
+    }
         </style>
 </head>
 <body>
@@ -196,10 +218,20 @@
           <a class="nav-link" href="./join">Join</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./media">very cool</a>
+          <a class="nav-link" href="./media">Media</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink">
+            Other
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="border:none;backgroud-color:#dddddd">
+            <a class="dropdown-item" href="./machining">Machining</a>
+            <a class="dropdown-item" href="#">Thing 2</a>
+            <a class="dropdown-item" href="#">Thing 3</a>
+          </div>
         </li>
         <li class="nav-item hasButton">
-          <button class="nav-link but" onClick="load('/donate')">Donate</button>
+          <button class="nav-link but" onClick="load('../donate')">Donate</button>
         </li>
         </div>
       </ul>
@@ -236,24 +268,25 @@
         </a>
       </div>
     </div>
-    <div id="about" class="container h-50">
-      <div class="d-flex flex-row" style="margin-top:10vh">
-        <img src="assets/images/team.jpg">
-        <div style="width:10vw"></div>
-        <div class="textbox">
-          <h1>About Us</h1>
-          <p>This is a team that does things. This is a team that does things.This is a team that does things.This is a team that does things.This is a team that does things.</p>
+    <div id="about" class="container">
+      <div class="row" style="margin-top:10vh">
+          <div class="col" style="margin-right:10px"><img src="assets/images/team.jpg"></div>
+          <div class="textbox col">
+            <h1>About Us</h1>
+            <p>This is a team that does things. This is a team that does things.This is a team that does things.This is a team that does things.This is a team that does things.</p>
+          </div>
         </div>
-      </div>
+
     </div>
-    <div id="first" class="container h-50">
-      <div class="d-flex flex-row" style="margin-top:10vh">
-        <div class="textbox">
+    <div id="first" class="container">
+      <div class="row" style="margin-top:10vh">
+        <div class="textbox col">
           <h1>About FIRST</h1>
           <p>This is a team that does things. This is a team that does things.This is a team that does things.This is a team that does things.This is a team that does things.</p>
         </div>
-        <div style="width:10vw"></div>
-        <img src="assets/images/first.jpg">
+        <div class="col">
+          <img src="assets/images/first.jpg">
+        </div>
       </div>
     </div>
     </div>
@@ -274,5 +307,9 @@
               </div>
           </div>
       </footer>
-  </div></body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>
