@@ -31,8 +31,39 @@
   </style>
 </head>
 <body>
-    <div data-include="header"></div>
-    <div class="m-0" style="height:100%;width:100%;">
+  <nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="navbar-brand" style="padding-left:12vw;" onClick="load('/',false)">
+      <img style="position:relative;bottom:3px;height:30px;" src='assets/images/icon.svg'>
+      <a style="text-decoration:none" href="/">JUMP</a>
+    </div>    
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/people">People</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/robots">Robots</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/join">Join</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/media">very cool</a>
+        </li>
+        <li class="nav-item hasButton">
+          <button class="nav-link but" onClick="load('/donate')">Donate</button>
+        </li>
+        </div>
+      </ul>
+    </div>
+  </nav>    <div class="m-0" style="height:100%;width:100%;">
       <div id="txt">
         <h1 class="cLabel">JUMP</h1>
         <h1 class="cLabel">Robotics</h1>
@@ -86,6 +117,21 @@
     </div>
     </div>
     <div id="sponsors" class="container"></div>
-    <div data-include="footer"></div>
-</body>
+    <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col">Contact us at <a id="mail" href="mailto: ">EMAIL</a>
+                    <div style="position:absolute;bottom:0;">© JUMP Robotics 2022</div>
+                  </div>
+                  <div class="col item social">
+                      <a href="https://github.com/Team8262" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon></a>
+                      <a href="https://instagram.com/jump_robotics" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+                      <a href="https://www.youtube.com/channel/UCfcBKkzUNnTNrnl7_bDVtQg" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-youtube"></ion-icon></a>
+                      <a href="https://discord.gg/VpMqKwDect" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-discord"></ion-icon></a>
+                    </div>
+              </div>
+          </div>
+      </footer>
+  </div></body>
 </html>
