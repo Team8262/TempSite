@@ -3,8 +3,9 @@
   <head>
     <style>
       .navbar{
-        background-color:#f2f2f2;
-        text-color:#bfd7ff;
+        background-color:#ffffff;
+        font-size:1.1rem;
+        opacity:90%
       }
       .custom-toggler .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(191, 215, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -15,21 +16,50 @@
       .custom-toggler:hover{
         background-color:#d9dade;
       }
-      a:hover{
-        color:#bfd7ff; !important
-      }
       .navbar-brand:hover{
+        filter: brightness(85%);
+      }
+      .nav-item{
+        padding-left:5vw;
+      }
 
+      .nav-item:not(.hasButton):hover{
+        text-decoration:underline 5px;
+        text-underline-offset:5px;
+      }
+
+      .but:hover{
+        filter:brightness(120%);
+        cursor:pointer;
+      }
+
+      .but{
+        background: -webkit-linear-gradient(10deg, rgb(32, 145, 221), rgb(91, 17, 228));
+        border:none;
+        color:#ffffff;
+        border-radius:10%;
+        width:100%;
+      }
+      /*992px is the breakpoint for navbar lg*/
+      @media screen and (max-width:992px){
+        .but{
+          border-radius:0;
+        }
+      }
+
+      .nav-item.a{
+        background: -webkit-linear-gradient(10deg, rgb(32, 145, 221), rgb(91, 17, 228));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-lg fixed-top">
 
-      <div class="navbar-brand" onclick="(function(){window.location="/"
-      });return false;">
+      <div class="navbar-brand" style="padding-left:12vw;" onClick="load('/',false)">
         <img style="position:relative;bottom:3px;height:30px;" src='/assets/images/icon.svg'>
-        <a style="text-decoration:none" href="/">JUMP Robotics</a>
+        <a style="text-decoration:none" href="/">JUMP</a>
       </div>    
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -46,7 +76,13 @@
             <a class="nav-link" href="/robots">Robots</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">SOmething else</a>
+            <a class="nav-link" href="/join">Join</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/media">very cool</a>
+          </li>
+          <li class="nav-item hasButton">
+            <button class="nav-link but" onClick="load('/donate')">Donate</button>
           </li>
           </div>
         </ul>

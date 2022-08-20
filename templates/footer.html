@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <style>
 .footer-dark {
   padding:50px 0;
@@ -72,8 +71,8 @@
   line-height:32px;
   display:inline-block;
   text-align:center;
-  border-radius:50%;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  //border-radius:50%;
+  //box-shadow:0 0 0 1px rgba(255,255,255,0.4);
   margin:0 8px;
   color:#fff;
   opacity:0.75;
@@ -103,10 +102,15 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col">Contact us at <a id="mail" href="mailto: ">EMAIL</a></div>
-                    <div class="col item social">
-                        <a href="https://github.com/Team8262" target="_blank" rel="noopener noreferrer"><i class="icon ion-social-github"></i></a>
+                    <div class="col">Contact us at <a id="mail" href="mailto: ">EMAIL</a>
+                      <div style="position:absolute;bottom:0;">© JUMP Robotics 2022</div>
                     </div>
+                    <div class="col item social">
+                        <a href="https://github.com/Team8262" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-github"></ion-icon></a>
+                        <a href="https://instagram.com/jump_robotics" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://www.youtube.com/channel/UCfcBKkzUNnTNrnl7_bDVtQg" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-youtube"></ion-icon></a>
+                        <a href="https://discord.gg/VpMqKwDect" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-discord"></ion-icon></a>
+                      </div>
                 </div>
             </div>
         </footer>
