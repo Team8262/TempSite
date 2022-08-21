@@ -9,7 +9,7 @@ $(function () {
 
 function load(addr, newPage){
   if(newPage){
-    window.open('https://' + linaddrk, '_blank').focus();
+    window.open('https://' + addr, '_blank').focus();
   }else{
     window.location=addr
   }
