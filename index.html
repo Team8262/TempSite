@@ -20,7 +20,7 @@
       top:40%;
       left:10%;
       color:rgb(255, 255, 255);
-      font-family: 'Montserrat', sans-serif;
+      font-family: Montserrat, sans-serif;
       filter:brightness(150%);
       max-width: max-content;
     }
@@ -157,6 +157,10 @@
         margin-top:20px;
       }
     }
+
+    .navbar-brand{
+      padding-left:4vw;
+    }
     
     .footer-dark .item.social > a {
       font-size:36px;
@@ -203,9 +207,9 @@
 <body>
   <nav class="navbar navbar-expand-lg fixed-top">
 
-    <div class="navbar-brand" style="padding-left:12vw;" onClick="load('/',false)">
+    <div class="navbar-brand" onClick="load('/',false)">
       <img style="position:relative;bottom:3px;height:30px;" src='assets/images/icon.svg'>
-      <a style="text-decoration:none" href="#">JUMP</a>
+      <a style="text-decoration:none;" href="#">JUMP</a>
     </div>    
     <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -277,7 +281,7 @@
     </div>
     <div id="about" class="container">
       <div class="row info" style="margin-top:10vh">
-          <div class="col" style="margin-right:10px"><img src="assets/images/team.jpg"></div>
+          <div class="col" style="text-align:center"><img src="assets/images/team.jpg"></div>
           <div class="textbox col">
             <h1>About Us</h1>
             <p>This is a team that does things. This is a team that does things.This is a team that does things.This is a team that does things.This is a team that does things.</p>
@@ -287,17 +291,17 @@
     </div>
     <div id="first" class="container">
       <div class="row info" style="margin-top:10vh">
-        <div class="textbox col">
+        <div class="textbox col" style="margin-top:5vh;">
           <h1>About FIRST</h1>
           <p>This is a team that does things. This is a team that does things.This is a team that does things.This is a team that does things.This is a team that does things.</p>
         </div>
-        <div class="col">
-          <img src="assets/images/first.jpg">
+        <div class="col" style="text-align: center;">
+          <img style="position:relative;top:0%;width:300px;" src="assets/images/frc.jpg">
         </div>
       </div>
     </div>
     </div>
-    <div id="sponsors" class="container"></div>
+    <div id="sponsors" class="container" style="margin-bottom:30px;"></div>
     <div class="footer-dark">
       <footer>
           <div class="container">

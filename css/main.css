@@ -3,6 +3,8 @@ h1, p{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter:brightness(100%);
+    font-family: Montserrat, sans-serif!important;
+    
   }
   .full{
     width:100%;
@@ -10,6 +12,9 @@ h1, p{
     background-position:center;
     background-size:cover;
   }
+a{
+    font-family: Montserrat, sans-serif;
+}
 
 body{
     background-color:#ffffff;
@@ -18,4 +23,5 @@ body{
 
 html{
     scroll-behavior: smooth;
+    
 }
