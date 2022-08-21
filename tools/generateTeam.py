@@ -21,8 +21,11 @@ for j in imgDir:
     try:
         _,first, last, _ = j.split("\\")[-1].split(" ")
     except ValueError:
-        first = j.split("\\")[-1].split(" ")[0]
-        last = ""
+        last = "" 
+        try:
+            first = j.split("\\")[-1].split(" ")[0]
+        except ValueError:
+            first = "Person"
     flip = html.new_tag('div')
     flip['class'] = "flip-card"
 
