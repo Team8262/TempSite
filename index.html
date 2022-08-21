@@ -160,7 +160,7 @@
     }
 
     .navbar-brand{
-      padding-left:4vw;
+      padding-left:10vw;
     }
     
     .footer-dark .item.social > a {
@@ -197,6 +197,9 @@
       margin-top: 0;
       margin-left:20%;
     }
+    .dropdown-item:hover{
+      filter:brightness(70%);
+    }
     .dropdown-item{
       background: -webkit-linear-gradient(10deg, rgb(32, 145, 221), rgb(91, 17, 228));
       -webkit-background-clip: text;
@@ -229,21 +232,17 @@
         <li class="nav-item">
           <a class="nav-link" href="./join">Join</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./media">Media</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink">
-            Other
+            More
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="border:none;backgroud-color:#dddddd">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="border:none;background-color:#ffffff">
+            <a class="dropdown-item" href="./media">Media</a>
             <a class="dropdown-item" href="./machining">Machining</a>
-            <a class="dropdown-item" href="#">Thing 2</a>
-            <a class="dropdown-item" href="#">Thing 3</a>
           </div>
         </li>
         <li class="nav-item hasButton">
-          <button class="nav-link but" onClick="load('../donate')">Donate</button>
+          <button class="nav-link but" onClick="load('./donate')">Donate</button>
         </li>
         </div>
       </ul>
