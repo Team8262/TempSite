@@ -12,6 +12,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="../js/loadtemplate.js"></script>
+  <script>
+    function mm(){
+      var photos = document.getElementsByClassName("s")
+      console.log(photos)
+      for(const pic of photos){
+        pic.src="../assets/images/people/jack"+randInt(3)+".jpg"
+      }
+      var cards = document.getElementsByClassName("flip-card-back")
+      for(const card of cards){
+        let children = card.children;
+        children[0].textContent = "Jack"
+        children[1].textContent = "Makes a mean battery mount"
+      }
+      }
+  </script>
   <style>
     .flip-card {
       background-color: transparent;
@@ -74,6 +89,8 @@
   </style>
 </head>
 <body>
+</body>
+    <div id="Don't run mm()"></div>
     <div data-include="header"></div>
     <div class="container" style="height:30%;">
       <h1 style="position:relative;top:50%;text-align:center;">Meet the Team</h1>

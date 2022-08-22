@@ -14,3 +14,7 @@ function load(addr, newPage){
     window.location=addr
   }
 }
+
+function randInt(max) {
+  return Math.floor(Math.random() * max);
+}
