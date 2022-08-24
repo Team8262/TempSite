@@ -12,10 +12,108 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="../js/loadtemplate.js"></script>
+  <style> 
+    /* Create four equal columns that sits next to each other */
+    .col {
+      flex: 50%;
+      max-width: 50%;
+      padding: 0 4px;
+    }
+    
+    .col img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+    }
+    .imgLabel{
+      text-align:center;
+    }
+    .menu{
+      margin:20vw;
+    }
+    .sel{
+      height:3rem;
+      margin:auto;
+      opacity: 70%;
+      border-width:0;
+      border-radius:10%;
+      font-weight:600;
+      background:none;
+      transform: scale(1.2);
+    }
+
+    button.sel.collapsed:hover{
+      transform: scale(1.1);
+      font-weight: 530;
+    }
+    button.sel.collapsed{
+      background:none;
+      font-weight:500;
+      transform:none;
+    }
+    .sel:focus{
+      outline:none;
+    }
+    .btnLab{
+      font-size:2.4rem;
+      font-family: Montserrat, sans-serif;
+      position:relative;
+      background: -webkit-linear-gradient(10deg, rgb(32, 145, 221), rgb(91, 17, 228));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      top:-10%;
+    }
+    #yes:hover{
+      transform:translateY(-20px);
+    }
+    #yes{
+      transition: transform 500ms ease-in-out 25ms;
+    }
+  </style>
 </head>
 <body>
     <div data-include="header"></div>
-    <div class="container h-100"></div>
+    <div class="container" id="head" style="height:30%;">
+      <h1 style="position:relative;top:50%;text-align:center;">Our Photos</h1>
+    </div>
+    <div class="container" id="parent">
+      <div class="row justify-content-center" style="text-align:center">
+        <button class="sel" data-toggle="collapse" data-target="#2022" ><div class="btnLab">2022</div></button>
+        <button class="sel collapsed" data-toggle="collapse" data-target="#2021" ><div class="btnLab">2021</div></button>
+        <button class="sel collapsed" data-toggle="collapse" data-target="#2020"><div class="btnLab">2020</div></button>
+      </div>
+
+      <div class="collapse show" id="2022" data-parent="#parent">  
+        <div data-include="2022media" class="row"></div>  
+      </div>
+      <div class="collapse" id="2021" data-parent="#parent">  
+        <div data-include="2021media" class="row"></div>
+      </div>
+      <div class="collapse" id="2020" data-parent="#parent">  
+        <div data-include="2020media" class="row"></div>
+      </div>  
+  </div>
+
+  <div class="row justify-content-center" style="padding-top:40px;padding-bottom:20px">
+    <h1 id="yes" onClick="load('#head')">To Top</h1>
+  </div>
+
     <div data-include="footer"></div>
 </body>
 </html>
