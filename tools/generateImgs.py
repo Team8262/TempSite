@@ -25,7 +25,7 @@ def get(year):
         else:
             landscapes.append(img)
         
-    pIn = len(portraits)//2
+    pIn = len(portraits)//2+1
     lIn = len(landscapes)//2
 
     first = portraits[0:pIn] + (landscapes[0:lIn])
