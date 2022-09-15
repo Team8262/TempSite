@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" style="height:100%">
 <head>
-  <title>People | JUMP Robotics</title>
+  <title>The Team | JUMP Robotics</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" type="image/png" href="../assets/images/icon.svg?v=1"/>
+  <meta content="e0Mh-iNeySCb2HbBc3ksxCA1wCT4eZjS_rkUaK7qjNc" name="google-site-verification">
+  <meta content="Meet our members." name="description">
+  <meta content="The Team | JUMP Robotics" property="og:title">
+  <meta content="Meet our members." property="og:description">
+  <meta content="The Team | JUMP Robotics" property="twitter:title">
+  <meta content="Meet our members." property="twitter:description">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -12,7 +20,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="../js/loadtemplate.js"></script>
+  <script>var easterEgg = konami()</script>
   <script>
+    const zachs=['posterbrandt.jpg', 'tallbrandt.jpg', 'zbrandthi.jpg', 'zbrandtscary.jpg']
+
+    function zbrandt(){
+      var photos = document.getElementsByClassName("s")
+      console.log(photos)
+      for(const pic of photos){
+        pic.src="../assets/images/zbrandt/" +zachs[Math.floor(Math.random()*zachs.length)]
+      }
+      var cards = document.getElementsByClassName("flip-card-back")
+      for(const card of cards){
+        let children = card.children;
+        children[0].textContent = "Zachary Brandt"
+        children[1].textContent = "Newest member of JUMP"
+      }
+    }
     function mm(){
       var photos = document.getElementsByClassName("s")
       console.log(photos)
@@ -28,6 +52,21 @@
 
 
       }
+
+      function actual(){
+        var photos = document.getElementsByClassName("s")
+        console.log(photos)
+        for(const pic of photos){
+          pic.src="../assets/images/people/kenji0.jpg"
+        }
+        var cards = document.getElementsByClassName("flip-card-back")
+        for(const card of cards){
+          let children = card.children;
+          children[0].textContent = "Kenji"
+          children[1].textContent = "The One Man Team"
+        }
+      }
+
       function updateText(){
         if(loaded===false){
           window.setTimeout(updateText, 100);
@@ -92,7 +131,7 @@
 
 
     .flip-card-back, .s{
-      border-radius:10%;
+      border-radius:7%;
     }
     .s{
       height:100%;
@@ -104,7 +143,12 @@
 </head>
 <body>
 </body>
+  <!--BUTTON-->
+  <button onClick="secretCode()" style="display:none;"></button>
+  
     <div id="Don't run mm()"></div>
+    <div data-include="translate"></div>
+
     <div data-include="header"></div>
     <div class="container" style="height:30%;">
       <h1 style="position:relative;top:50%;text-align:center;">Meet the Team</h1>

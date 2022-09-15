@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 h1, p{
     background: -webkit-linear-gradient(10deg, rgb(32, 145, 221), rgb(91, 17, 228));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter:brightness(100%);
-    font-family: Montserrat, sans-serif!important;
+    font-family: 'Montserrat', sans-serif!important;
     
   }
   .full{
@@ -13,12 +16,17 @@ h1, p{
     background-size:cover;
   }
 a{
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hide{
+    display:none;
 }
 
 body{
     background-color:#ffffff;
     height:100%;
+    overflow-x:hidden;
 }
 
 html{
@@ -36,4 +44,59 @@ button:focus{
 }
 .greyed:hover{
     transform:none!important;
+}
+
+.goog-te-banner-frame{
+    display:none!important;
+    visibility:none!important;
+
+}
+
+#google_translate_element{
+    display:none!important;
+}
+
+
+@keyframes grow{
+    0% { transform:scale(1)}
+    50%{ transform:scale(5)}
+    100% {transform:scale(1)}
+}
+
+@keyframes upDown{
+    to { transform: translatey(20px);}
+}
+
+@keyframes translate{
+    to { transform: translatex(900%);}
+}
+
+@keyframes bob{
+    to{transform:translatey(20px);}
+}
+
+@keyframes crawl{
+    0% {
+        left: -250px;
+      transform: scaleX(1);
+    }
+    49.999% {
+      transform: scaleX(1);
+    }
+    50% {
+      left: calc(100%);
+      transform: scaleX(-1);
+    }
+    100% {
+      left: -250px;
+      transform: scaleX(-1);
+    }
+}
+
+@keyframes jitter{
+    0%{transform:rotate(0)}
+    25%{transform:rotate(0.5deg)}
+    50%{transform:rotate(0)}
+    75%{transform:rotate(-0.5deg)}
+    100%{transform:rotate(0)}
 }
